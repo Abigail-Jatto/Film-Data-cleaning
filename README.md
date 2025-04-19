@@ -1,15 +1,13 @@
 # Film Data Cleaning Project (MySQL)
 
-This project involves duplicating, cleaning, and preparing a dataset named `film_data` for further analysis. The operations were performed using **MySQL**, with a focus on removing duplicates, correcting formatting issues, and ensuring data consistency.
+This project involves duplicating, cleaning, and preparing a dataset named `film_data` for further analysis. The operations were performed using **MySQL** by removing duplicates, correcting formatting issues, and ensuring data consistency.
 
-This SQL project showcases basic and essential steps in preparing a raw dataset for analysis, including:
+The following steps include:
 
 - Removing duplicate records and columns  
 - Assigning unique identifiers  
 - Cleaning inconsistent values  
 - Renaming and formatting columns
-**🔗 [Project 1: Film Data Cleaning Project (MySQL)]**
-
 ---
 
 ## Data Duplication and Backup
@@ -53,7 +51,7 @@ FROM films
 GROUP BY movie_title
 HAVING COUNT(movie_title) > 1;
 
--- View a specific duplicate
+-- Viewing specific duplicate
 SELECT * FROM films
 WHERE movie_title = 'Avengers: Age of Ultron?Ã¿';
 
@@ -92,7 +90,7 @@ WHERE duration = ' ';
 
 ---
 
-## Rename & Clean Columns
+## Renaming Columns
 
 ### 1. **Standardize column names**
 ```sql
